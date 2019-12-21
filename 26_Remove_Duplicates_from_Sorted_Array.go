@@ -3,16 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	nums := []int{1, 1, 2}
-	fmt.Printf("length:%d\n", removeDuplicates(nums))
-	nums = []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
-	fmt.Printf("length:%d\n", removeDuplicates(nums))
-	nums = []int{0}
-	fmt.Printf("length:%d\n", removeDuplicates(nums))
-	nums = []int{}
-	fmt.Printf("length:%d\n", removeDuplicates(nums))
-	nums = []int{1, 2, 3, 4}
-	fmt.Printf("length:%d\n", removeDuplicates(nums))
+
+	f := func(nums []int) {
+		fmt.Println(nums)
+		fmt.Printf("%d\nlength:%d\n\n",
+			nums, removeDuplicates(nums))
+	}
+
+	f([]int{1, 1, 2})
+	f([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4})
+	f([]int{0})
+	f([]int{})
+	f([]int{1, 2, 3, 4})
 }
 
 func removeDuplicates(nums []int) int {
