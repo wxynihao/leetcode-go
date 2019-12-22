@@ -48,7 +48,6 @@ func (this *MyCircularDeque) InsertFront(value int) bool {
 		}
 	}
 	this.data[this.front] = value
-	// todo
 	return true
 }
 
