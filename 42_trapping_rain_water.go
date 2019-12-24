@@ -23,7 +23,6 @@ func trap(height []int) int {
 		}
 		minWallArr[i] = max
 	}
-	fmt.Println(minWallArr)
 
 	max = height[length-1]
 	for i := length - 1; i > 1; i-- {
@@ -34,7 +33,6 @@ func trap(height []int) int {
 			minWallArr[i-2] = max
 		}
 	}
-	fmt.Println(minWallArr)
 
 	sum := 0
 	for i := 1; i < length-1; i++ {
