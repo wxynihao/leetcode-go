@@ -33,9 +33,11 @@ func moveZeroes(nums []int) {
 
 func moveZeroes2(nums []int)  {
 	pos := 0
-	for _, tmp := range nums {
+	for i, tmp := range nums {
 		if tmp != 0 {
-			nums[pos] = tmp
+			if i!= pos{
+				nums[pos] = tmp
+			}
 			pos++
 		}
 	}
